@@ -123,3 +123,13 @@ body {
 .app-main-content {
     flex-grow: 1;
 }
+
+
+.btn:hover {
+    background-color: #c00812;
+}
+
+.btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}

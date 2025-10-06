@@ -34,3 +34,73 @@
 .error-message {
   color: #e50914;
 }
+
+/* src/styles/HomePage.css */
+
+/* --- Search Section (often on Home/Add pages) --- */
+.add-page { /* Assuming this class is used for a page with search functionality */
+    padding: 20px;
+}
+
+.add-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.add-content .input-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.add-content .input {
+    width: 100%; /* Make search input full width */
+    padding: 12px 15px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #f0f0f0;
+    font-size: 18px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.add-content .input::placeholder {
+    color: #888;
+}
+
+
+/* --- Movie List Grid --- */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Default for larger screens */
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px; /* Max width for the grid */
+    margin: 0 auto;
+}
+
+/* =================================================== */
+/*             MOBILE-SPECIFIC STYLES (HomePage/Add)   */
+/* =================================================== */
+
+@media (max-width: 768px) {
+    .add-page {
+        padding: 15px;
+    }
+
+    .add-content .input {
+        font-size: 16px; /* Smaller font size for search input */
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Two columns on smaller screens */
+        gap: 15px; /* Reduce gap */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+        padding: 10px;
+    }
+}

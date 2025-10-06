@@ -73,3 +73,81 @@
   background-color: #4ac1e2;
 }
 /* No need for separate login/logout button styles here, as GoogleLoginButton handles its own */
+
+/* src/styles/Navbar.css */
+
+.header {
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.brand a {
+    color: #e50914; /* Netflix red */
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px; /* Spacing between nav items */
+}
+
+.main-nav li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.main-nav li a:hover {
+    color: #e50914;
+}
+
+/* =================================================== */
+/*             MOBILE-SPECIFIC STYLES (Navbar)         */
+/* =================================================== */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px;
+    }
+
+    .brand {
+        margin-bottom: 10px; /* Space between brand and nav */
+    }
+
+    .main-nav ul {
+        width: 100%; /* Make nav take full width */
+        justify-content: center; /* Center nav items */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .main-nav li a {
+        font-size: 16px; /* Smaller font size for nav */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .brand a {
+        font-size: 24px;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center them */
+        gap: 8px; /* Even less gap */
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #333; /* Separator for nav items */
+    }
+}
