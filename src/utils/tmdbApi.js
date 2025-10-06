@@ -78,14 +78,19 @@ export const getImageUrl = (path) => {
     return `${IMAGE_BASE_URL}${path}`;
 }
 
-// You can add a search function here later when we implement search
 export const searchMovies = async (query) => {
-    if (!API_KEY || !query) return [];
-    try {
-        const response = await axios.get(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`);
-        return response.data.results;
-    } catch (error) {
-        console.error(`Error searching for movies with query "${query}":`, error);
-        return [];
-    }
+  if (!API_KEY) {
+    console.error("API_KEY is not defined for search.");
+    return { results: [], total_pages: 0, total_results: 0 };
+  }
+  if (!query) {
+    return { results: [], total_pages: 0, total_results: 0 }; // Return empty if no query
+  }
+  try {
+    const response = await axios.get(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+    return response.data; // This will contain { results: [], total_pages: X, total_results: Y }
+  } catch (error) {
+    console.error("Error searching movies:", error);
+    return { results: [], total_pages: 0, total_results: 0 };
+  }
 };

@@ -60,7 +60,7 @@ function HomePage({ currentUser, onAddToListCustom }) {
   const handleAddToListCustom = (movie) => {
     // onAddToListCustom will handle currentUser check and modal opening
     onAddToListCustom(movie);
-  };
+  }; 
 
 
   if (loading) return <div className="loading-message">Loading movies...</div>;
@@ -69,7 +69,10 @@ function HomePage({ currentUser, onAddToListCustom }) {
   return (
     <div className="home-page">
       <h2 className="page-title">Discover Movies</h2>
-      <GenreFilter onSelectGenre={setSelectedGenre} />
+      <GenreFilter 
+        selectedGenreId={selectedGenre} // Pass HomePage's state to GenreFilter
+        onSelectGenre={setSelectedGenre} // Pass HomePage's setter to GenreFilter
+      />
 
       <div className="movies-grid">
         {movies.length > 0 ? (

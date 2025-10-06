@@ -6,14 +6,6 @@
   color: #f0f0f0;
 }
 
-.page-title {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: #e50914;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
 .movies-grid {
   display: flex;
   flex-wrap: wrap; /* Allows cards to wrap to next line */
@@ -102,5 +94,34 @@
     .movie-grid {
         grid-template-columns: 1fr; /* Single column layout for very small screens */
         padding: 10px;
+    }
+}
+
+/* ... other styles in HomePage.css ... */
+
+.page-title {
+    color: #e50914; /* Netflix red */
+    font-size: 3.2em; /* Large size */
+    font-weight: 700; /* Bold */
+    text-align: center;
+    margin-top: 40px; /* Space from header */
+    margin-bottom: 25px; /* Space before filters */
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.4); /* Subtle glow */
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5em; /* Smaller on tablets */
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2em; /* Even smaller on phones */
+        margin-top: 20px;
+        margin-bottom: 15px;
     }
 }

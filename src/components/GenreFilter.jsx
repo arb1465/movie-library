@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { fetchMovieGenres } from '../utils/tmdbApi';
 import '../styles/GenreFilter.css';
 
-function GenreFilter({ onSelectGenre }) {
+function GenreFilter({ onSelectGenre, selectedGenreId }) {
   const [genres, setGenres] = useState([]);
-  const [selectedGenreId, setSelectedGenreId] = useState(null);
+  // const [selectedGenreId, setSelectedGenreId] = useState(null);
 
   useEffect(() => {
     const getGenres = async () => {
@@ -16,8 +16,8 @@ function GenreFilter({ onSelectGenre }) {
   }, []);
 
   const handleGenreClick = (genreId) => {
-    setSelectedGenreId(genreId === selectedGenreId ? null : genreId); // Toggle selection
-    onSelectGenre(genreId === selectedGenreId ? null : genreId); // Notify parent
+    // setSelectedGenreId(genreId);
+    onSelectGenre(genreId);
   };
 
   return (
