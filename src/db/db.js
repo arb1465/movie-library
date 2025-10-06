@@ -1,12 +1,11 @@
-import Dexie from "dexie";
+// src/db/db.js
+import Dexie from 'dexie';
 
-// Create DB
-const db = new Dexie("MovieAppDB");
+const db = new Dexie('MovieLibraryDB');
 
-// Define stores (tables) - declared fields will be used to query the data
 db.version(1).stores({
-  watchlist: "++id,movieId,title", // default watchlist
-  lists: "++id,name"               // user-created lists
+  watchlist: '&userId, movieIds',
+  customLists: '&listId, userId, name, movieIds',
 });
 
 export default db;

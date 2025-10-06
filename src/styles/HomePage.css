@@ -1,0 +1,36 @@
+/* src/styles/HomePage.css */
+.home-page {
+  padding: 20px;
+  background-color: #0d0d0d;
+  min-height: calc(100vh - 80px); /* Adjust based on header height */
+  color: #f0f0f0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #e50914;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to next line */
+  justify-content: center; /* Center the movie cards */
+  gap: 20px; /* Space between cards */
+  padding: 20px 0;
+}
+
+.loading-message,
+.error-message,
+.no-movies-found {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 50px;
+  color: #bbb;
+}
+
+.error-message {
+  color: #e50914;
+}

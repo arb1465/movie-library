@@ -1,0 +1,94 @@
+/* src/styles/CustomListSelectionModal.css */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #282c34; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-content h2 {
+  color: #ff0000; /* Red for headings */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.list-options {
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px; /* For scrollbar spacing */
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list-item input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #ff0000; /* Red accent for checkbox */
+  width: 18px;
+  height: 18px;
+}
+
+.list-item label {
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:first-child { /* Add Movie button */
+  background-color: #ff0000; /* Red */
+  color: white;
+}
+
+.modal-actions button:first-child:hover:not(:disabled) {
+  background-color: #cc0000;
+}
+
+.modal-actions button:last-child { /* Cancel button */
+  background-color: #555;
+  color: white;
+}
+
+.modal-actions button:last-child:hover {
+  background-color: #777;
+}
+
+.modal-actions button:disabled {
+  background-color: #444;
+  color: #999;
+  cursor: not-allowed;
+}

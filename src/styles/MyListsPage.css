@@ -1,0 +1,149 @@
+/* src/styles/MyListsPage.css */
+.mylists-page-container {
+  padding: 20px;
+  background-color: #0d0d0d;
+  min-height: calc(100vh - 80px);
+  color: #f0f0f0;
+}
+
+.mylists-page-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #e50914;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mylists-message {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 50px;
+  color: #bbb;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mylists-message.error-message {
+  color: #ff4d4d;
+}
+
+.mylists-message.no-lists-message {
+  line-height: 1.6;
+}
+
+.custom-lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1000px; /* Limit width for better readability */
+  margin: 0 auto;
+}
+
+.custom-list-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.custom-list-card:hover {
+  transform: translateY(-3px);
+}
+
+.list-header {
+  padding: 15px 20px;
+  background-color: #222;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list-header:hover {
+  background-color: #333;
+}
+
+.list-name {
+  margin: 0;
+  font-size: 1.6em;
+  color: #e50914;
+}
+
+.list-description {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #bbb;
+  border-bottom: 1px solid #333;
+  margin: 0;
+}
+
+.toggle-icon {
+  font-size: 1.5em;
+  color: #f0f0f0;
+  transition: transform 0.2s;
+}
+
+.list-movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  border-top: 1px solid #333;
+}
+
+.no-movies-in-list {
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.list-movie-actions {
+  padding: 10px;
+  border-top: 1px solid #333;
+}
+
+.btn-remove-from-list {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btn-remove-from-list:hover {
+  background-color: #e53935;
+}
+
+.list-footer-actions {
+    padding: 15px 20px;
+    border-top: 1px solid #333;
+    text-align: right;
+}
+
+.btn-delete-list {
+    background-color: #7a1f1f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s;
+}
+
+.btn-delete-list:hover {
+    background-color: #9c2b2b;
+}

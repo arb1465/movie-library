@@ -1,0 +1,73 @@
+/* src/styles/WatchlistPage.css */
+.watchlist-page-container {
+  padding: 20px;
+  background-color: #0d0d0d;
+  min-height: calc(100vh - 80px); /* Adjust based on header height */
+  color: #f0f0f0;
+}
+
+.watchlist-page-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #e50914;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.watchlist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.watchlist-message {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 50px;
+  color: #bbb;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.watchlist-message.error-message {
+  color: #ff4d4d;
+}
+
+.watchlist-message .link {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.watchlist-message .link:hover {
+  text-decoration: underline;
+}
+
+/* Specific styling for the remove button within MovieCard in watchlist context */
+.watchlist-actions {
+  padding: 10px;
+  border-top: 1px solid #333;
+}
+
+.btn-remove-watchlist {
+  background-color: #d32f2f; /* Darker red for remove */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.btn-remove-watchlist:hover {
+  background-color: #e53935;
+}

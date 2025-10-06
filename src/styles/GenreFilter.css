@@ -1,0 +1,38 @@
+/* src/styles/GenreFilter.css */
+.genre-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.genre-button {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap; /* Prevent buttons from wrapping text */
+}
+
+.genre-button:hover {
+  background-color: #555;
+  border-color: #777;
+}
+
+.genre-button.active {
+  background-color: #e50914; /* Netflix red for active state */
+  border-color: #e50914;
+  color: white;
+  font-weight: bold;
+}
+
+.genre-button.active:hover {
+  background-color: #f40612;
+  border-color: #f40612;
+}

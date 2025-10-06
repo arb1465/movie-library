@@ -1,0 +1,309 @@
+/* src/styles/MovieDetailPage.css */
+.movie-detail-page {
+  position: relative;
+  min-height: calc(100vh - 80px); /* Adjust based on header */
+  color: #f0f0f0;
+  overflow: hidden; /* Important for backdrop */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align content to the top */
+  padding-top: 50px; /* Space from the top */
+}
+
+.backdrop-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px) brightness(0.4); /* Blur and darken */
+  -webkit-filter: blur(8px) brightness(0.4); /* Safari support */
+  z-index: 1;
+  transform: scale(1.02); /* To hide blur edges */
+}
+
+.detail-content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay for text readability */
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1200px; /* Max width for the detail box */
+  margin: 50px auto; /* Center the detail box vertically and horizontally */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  padding: 30px; /* Inner padding */
+  gap: 30px; /* Space between columns */
+}
+
+.detail-left-column {
+  flex-shrink: 0; /* Don't shrink poster column */
+  width: 300px; /* Fixed width for the poster */
+  text-align: center;
+}
+
+.detail-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.detail-no-poster {
+  width: 100%;
+  height: 450px; /* Approximate poster height */
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #bbb;
+  border-radius: 8px;
+}
+
+.btn-now-streaming {
+  background-color: #000; /* Black background for Apple TV+ */
+  color: white;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%; /* Make button full width of column */
+}
+
+.btn-now-streaming:hover {
+  background-color: #111;
+}
+
+.btn-now-streaming img {
+  height: 20px; /* Adjust logo size */
+}
+
+
+.detail-right-column {
+  flex-grow: 1; /* Allow right column to take remaining space */
+}
+
+.detail-title {
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #e50914; /* Netflix Red */
+  line-height: 1.2;
+}
+
+.detail-meta {
+  font-size: 1.1em;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.detail-meta span {
+  margin-right: 15px;
+}
+
+.user-score-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.user-score-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(100, 200, 100, 0.2); /* Greenish translucent */
+  border: 2px solid #66cc66; /* Green border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #66cc66;
+}
+
+.user-score-text {
+  font-size: 1.1em;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.btn-vibe {
+  background: none;
+  border: 1px solid #555;
+  color: #f0f0f0;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.btn-vibe:hover {
+  background-color: #333;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow actions to wrap on smaller screens */
+}
+
+.btn-detail-action {
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  text-decoration: none; /* For the trailer link */
+}
+
+.btn-detail-action i {
+    font-size: 1.2em;
+}
+
+.btn-detail-action:hover {
+  background-color: #6a6a6a;
+}
+
+.btn-play-trailer {
+  background-color: #e50914; /* Netflix red */
+}
+
+.btn-play-trailer:hover {
+  background-color: #f40612;
+}
+
+.overview-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #e50914;
+}
+
+.overview-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.crew-info {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap; /* Allow crew members to wrap */
+}
+
+.crew-member {
+  text-align: left;
+}
+
+.crew-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+.crew-role {
+  font-size: 0.95em;
+  color: #bbb;
+  margin: 0;
+}
+
+.detail-loading-message,
+.detail-error-message {
+    text-align: center;
+    font-size: 1.5em;
+    color: #f0f0f0;
+    margin-top: 100px;
+    position: relative; /* To be above backdrop */
+    z-index: 2;
+}
+
+.detail-error-message {
+    color: #e50914;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .detail-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .detail-left-column {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .detail-right-column {
+        padding: 0;
+    }
+
+    .detail-title {
+        font-size: 2.5em;
+    }
+
+    .detail-meta {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .user-score-section {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .detail-actions {
+        justify-content: center;
+        margin-bottom: 25px;
+        gap: 10px;
+    }
+
+    .crew-info {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .detail-title {
+        font-size: 2em;
+    }
+
+    .detail-left-column {
+        width: 180px;
+    }
+    .detail-no-poster {
+      height: 270px;
+    }
+
+    .overview-title {
+        font-size: 1.5em;
+    }
+
+    .detail-actions button {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+}
