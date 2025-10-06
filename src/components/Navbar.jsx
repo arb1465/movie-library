@@ -1,104 +1,61 @@
 // src/components/Navbar.jsx
-import React, { useState } from 'react';
-import { Link, useNavigate, useLocation  } from 'react-router-dom';
-// Assuming you have a GoogleLoginButton component
-import GoogleLoginButton from './GoogleLoginButton';
-import '../styles/Navbar.css'; // Ensure you're importing the consolidated CSS
+import React from 'react';
+import { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate
+import GoogleLoginButton from './GoogleLoginButton'; // Assuming GoogleLoginButton is robust enough to handle its own UI based on props
+import '../styles/Navbar.css'; // Don't forget to create/update this CSS file
 
-function Navbar({ currentUser, onLogout, onSearch }) {
+function Navbar({ currentUser, onLogin, onLogout }) {
+  const location = useLocation(); // Now useLocation is called within the Navbar component itself
   const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Hook for navigation
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    if (searchTerm.trim()) {
-      onSearch(searchTerm.trim());
-      navigate(`/search?query=${encodeURIComponent(searchTerm.trim())}`);
+  // Function to determine if a link is active (for styling)
+  const isActive = (path) => location.pathname === path ? 'active' : '';
+
+  // Placeholder for search functionality for now
+  const handleSearchSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    if (searchTerm.trim()) { // Only search if there's a non-empty query
+      navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`); // Navigate to a search results page
+      setSearchTerm(''); // Clear the search input after submission
     }
   };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false); // Function to close menu, e.g., after clicking a link
-  };
 
   return (
-    // Use the 'header' class for the main navbar container
-    <header className="header">
-      <div className="header-left">
-        <div className="brand">
-          <Link to="/" onClick={closeMobileMenu}>Movie Library</Link> {/* Close menu on brand click */}
-        </div>
-
-        {/* Hamburger Icon - Only visible on mobile */}
-        <button className="hamburger-menu" onClick={toggleMobileMenu}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </button>
-
-        <div className={`nav-and-controls ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <nav className="main-nav">
-            <ul>
-              <li>
-                <Link
-                  to="/"
-                  className={location.pathname === '/' ? 'active' : ''}
-                  onClick={closeMobileMenu}
-                >Home</Link>
-              </li>
-              {currentUser && (
-                <li>
-                  <Link
-                    to="/watchlist"
-                    className={location.pathname === '/watchlist' ? 'active' : ''}
-                    onClick={closeMobileMenu}
-                  >Watchlist</Link>
-                </li>
-              )}
-              {currentUser && (
-                <li>
-                  <Link
-                    to="/custom-lists"
-                    className={location.pathname === '/custom-lists' ? 'active' : ''}
-                    onClick={closeMobileMenu}
-                  >My Lists</Link>
-                </li>
-              )}
-            </ul>
-          </nav>
-
-          <div className="header-right"> 
-            <form onSubmit={handleSearchSubmit} className="search-form">
-              <input
-                type="text"
-                placeholder="Search movies..."
-                className="search-input"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <button type="submit" className="search-button">Search</button>
-            </form>
-
-            <div className="user-controls">
-              {currentUser ? (
-                <div className="user-info">
-                  <span>Hello, {currentUser.displayName || 'User'}!</span>
-                  <button onClick={() => { onLogout(); closeMobileMenu(); }} className="logout-button">Logout</button>
-                </div>
-              ) : (
-                <GoogleLoginButton onLoginSuccess={closeMobileMenu} />
-              )}
-            </div>
-          </div>
-        </div>
+    <nav className="navbar">
+      <div className="navbar-left">
+        <Link to="/" className="navbar-brand">Movie Library</Link>
+        <ul className="nav-links">
+          {/* Always show Home */}
+          <li><Link to="/" className={isActive('/')}>Home</Link></li>
+          {/* Only show Watchlist, My Lists, Create List if user is logged in */}
+          {currentUser && <li><Link to="/watchlist" className={isActive('/watchlist')}>Watchlist</Link></li>}
+          {currentUser && <li><Link to="/mylists" className={isActive('/mylists')}>My Lists</Link></li>}
+          {/* Create List will now navigate and App.jsx's useEffect handles the modal */}
+          {currentUser && <li><Link to="/create-list" className={isActive('/create-list')}>Create List</Link></li>}
+        </ul>
       </div>
-    </header>
+
+      <div className="navbar-right">
+        {/* Search Bar */}
+        <form className="search-form" onSubmit={handleSearchSubmit}> {/* Wrap search input in a form */}
+        <input
+          type="text"
+          placeholder="Search movies..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+        <button type="submit" className="search-button">Search</button>
+      </form>
+
+        {/* Google Login/Logout Button */}
+        {/* Pass props directly to GoogleLoginButton, it will handle its own display */}
+        <GoogleLoginButton onLoginSuccess={onLogin} onLogout={onLogout} currentUser={currentUser} />
+      </div>
+    </nav>
   );
 }
 
