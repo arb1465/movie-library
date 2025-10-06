@@ -16,7 +16,7 @@
 }
 
 .navbar-brand {
-  color: #61dafb;
+  color: #e50914;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -62,7 +62,7 @@
 .search-form button {
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #61dafb;
+  background-color: #e50914;
   color: #282c34;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -70,7 +70,7 @@
 }
 
 .search-form button:hover {
-  background-color: #4ac1e2;
+  background-color: #e50914;
 }
 /* No need for separate login/logout button styles here, as GoogleLoginButton handles its own */
 
@@ -87,7 +87,7 @@
 }
 
 .brand a {
-    color: #e50914; /* Netflix red */
+    color: #e50914;
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
@@ -176,7 +176,7 @@
 }
 
 .search-button {
-    background-color: #007bff; /* Example blue, or match your brand */
+    background-color: #e50914; /* Example blue, or match your brand */
     color: #fff;
     border: none;
     padding: 8px 15px;
@@ -187,7 +187,7 @@
 }
 
 .search-button:hover {
-    background-color: #0056b3;
+    background-color: #dc3545;
 }
 
 .user-info {
