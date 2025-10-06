@@ -6,7 +6,7 @@ import {
   fetchPopularMovies,
   fetchMoviesByGenre,
   fetchTrendingMovies,
-} from '../utils/tmdbAPI';
+} from '../utils/tmdbApi';
 import { addMovieToWatchlist } from '../../src/db/dbHelpers';
 import '../styles/HomePage.css';
 

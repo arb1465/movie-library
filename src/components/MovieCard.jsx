@@ -1,7 +1,7 @@
 // src/components/MovieCard.jsx - MODIFICATION
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link
-import { getImageUrl } from '../../src/utils/tmdbAPI';
+import { getImageUrl } from '../utils/tmdbApi';
 import '../styles/MovieCard.css';
 
 function MovieCard({ movie, currentUser, onAddToWatchlist, onAddToListCustom, children }) {

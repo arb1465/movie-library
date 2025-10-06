@@ -5,7 +5,7 @@ import {
   removeMovieFromCustomList,
   deleteCustomList,
 } from '../../src/db/dbHelpers';
-import { fetchMovieDetails } from '../../src/utils/tmdbAPI';
+import { fetchMovieDetails } from '../utils/tmdbApi';
 import MovieCard from '../components/MovieCard';
 import '../styles/MyListsPage.css';
 

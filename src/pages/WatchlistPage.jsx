@@ -1,7 +1,7 @@
 // src/pages/WatchlistPage.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { getWatchlistMovieIds, removeMovieFromWatchlist } from '../../src/db/dbHelpers';
-import { fetchMovieDetails } from '../../src/utils/tmdbAPI';
+import { fetchMovieDetails } from '../utils/tmdbApi';
 import MovieCard from '../components/MovieCard';
 import '../styles/WatchlistPage.css'; // Styling for this page
 

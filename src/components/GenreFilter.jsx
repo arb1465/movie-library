@@ -1,6 +1,6 @@
 // src/components/GenreFilter.jsx
 import React, { useState, useEffect } from 'react';
-import { fetchMovieGenres } from '../../src/utils/tmdbAPI';
+import { fetchMovieGenres } from '../utils/tmdbApi';
 import '../styles/GenreFilter.css';
 
 function GenreFilter({ onSelectGenre }) {

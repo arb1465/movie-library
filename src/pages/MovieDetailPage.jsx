@@ -1,7 +1,7 @@
 // src/pages/MovieDetailPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovieDetails, getImageUrl, getBackdropUrl } from '../../src/utils/tmdbAPI';
+import { fetchMovieDetails, getImageUrl, getBackdropUrl } from '../utils/tmdbApi';
 import { addMovieToWatchlist, fetchUserCustomLists, addMovieToCustomList } from '../../src/db/dbHelpers'; 
 import CustomListSelectionModal from '../components/CustomListSelectionModal';
 import '../styles/MovieDetailPage.css';
