@@ -23,7 +23,7 @@
 }
 
 .modal-content h2 {
-  color: #ff0000; /* Red for headings */
+  color: #0088ff; 
   margin-bottom: 20px;
   text-align: center;
 }
@@ -43,7 +43,7 @@
 
 .list-item input[type="checkbox"] {
   margin-right: 10px;
-  accent-color: #ff0000; /* Red accent for checkbox */
+  accent-color: #0088ff; 
   width: 18px;
   height: 18px;
 }
@@ -70,12 +70,12 @@
 }
 
 .modal-actions button:first-child { /* Add Movie button */
-  background-color: #ff0000; /* Red */
+  background-color: #0088ff;
   color: white;
 }
 
 .modal-actions button:first-child:hover:not(:disabled) {
-  background-color: #cc0000;
+  background-color: #0279e2;
 }
 
 .modal-actions button:last-child { /* Cancel button */

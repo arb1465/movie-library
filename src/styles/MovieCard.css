@@ -68,7 +68,7 @@
 }
 
 .movie-actions button {
-  background-color: #e50914; /* Netflix red */
+  background-color: #0088ff; /* Netflix red */
   color: white;
   border: none;
   padding: 8px 12px;
@@ -79,7 +79,7 @@
 }
 
 .movie-actions button:hover {
-  background-color: #f40612;
+  background-color: #0088ff;
 }
 
 .btn-add-custom {

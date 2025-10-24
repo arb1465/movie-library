@@ -26,7 +26,7 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 25px;
-  color: #e50914;
+  color: #0088ff;
   font-size: 1.8em;
 }
 
@@ -56,8 +56,8 @@
 .form-group input[type="text"]:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #e50914;
-  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.3);
+  border-color: #0088ff;
+  box-shadow: 0 0 0 2px rgba(7, 70, 242, 0.3);
 }
 
 .form-group textarea {
@@ -66,7 +66,7 @@
 }
 
 .modal-error-message {
-  color: #ff4d4d;
+  color: #0088ff;
   text-align: center;
   margin-top: -10px;
   margin-bottom: 15px;
@@ -97,12 +97,12 @@
 }
 
 .btn-create {
-  background-color: #e50914; /* Netflix red */
+  background-color: #0088ff; 
   color: white;
 }
 
 .btn-create:hover:not(:disabled) {
-  background-color: #f40612;
+  background-color: #0279e2;
 }
 
 .btn-cancel {

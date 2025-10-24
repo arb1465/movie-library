@@ -24,7 +24,7 @@
 }
 
 .error-message {
-  color: #e50914;
+  color: #0088ff;
 }
 
 /* src/styles/HomePage.css */
@@ -100,14 +100,14 @@
 /* ... other styles in HomePage.css ... */
 
 .page-title {
-    color: #e50914; /* Netflix red */
+    color: #0088ff; /* Netflix red */
     font-size: 3.2em; /* Large size */
     font-weight: 700; /* Bold */
     text-align: center;
     margin-top: 40px; /* Space from header */
     margin-bottom: 25px; /* Space before filters */
     letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(229, 9, 20, 0.4); /* Subtle glow */
+    text-shadow: 0 0 10px rgba(9, 79, 229, 0.4); 
 }
 
 @media (max-width: 768px) {

@@ -26,15 +26,15 @@
 }
 
 .genre-button.active {
-  background-color: #e50914; /* Netflix red for active state */
-  border-color: #e50914;
+  background-color: #0088ff; 
+  border-color: #0088ff;
   color: white;
   font-weight: bold;
 }
 
 .genre-button.active:hover {
-  background-color: #f40612;
-  border-color: #f40612;
+  background-color: #0279e2;
+  border-color: #0279e2;
 }
 
 
@@ -70,7 +70,7 @@
 
 /* Active/Selected Genre Button State */
 .genre-filter .genre-button.active {
-    background-color: #e50914; /* Netflix red for active state */
+    background-color: #0088ff; /* Netflix red for active state */
     color: #fff;
     font-weight: bold;
     box-shadow: 0 0 8px rgba(229, 9, 20, 0.4); /* Subtle glow */

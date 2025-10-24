@@ -1,13 +1,8 @@
-/* src/styles/AddToListModal.css */
-/* Reuse .modal-overlay, .modal-content, .form-group, .modal-error-message, .modal-actions from CreateListModal.css */
-/* Add specific styles or override as needed */
-
-/* Example: Specific button styles for this modal */
 .modal-content h3 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 25px;
-  color: #e50914;
+  color: #0088ff;
   font-size: 1.8em;
 }
 
@@ -39,13 +34,13 @@
 
 .modal-content select:focus {
   outline: none;
-  border-color: #e50914;
-  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.3);
+  border-color: #0088ff;
+  box-shadow: 0 0 0 2px rgba(9, 16, 229, 0.3);
 }
 
 
 .btn-add-movie {
-  background-color: #e50914; /* Netflix red */
+  background-color: #0088ff;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -58,7 +53,7 @@
 }
 
 .btn-add-movie:hover:not(:disabled) {
-  background-color: #f40612;
+  background-color: #0279e2;
 }
 
 .btn-add-movie:disabled {
@@ -99,7 +94,7 @@
 
 
 .modal-error-message {
-  color: #ff4d4d;
+  color: #0088ff;
   text-align: center;
   margin-top: -10px;
   margin-bottom: 15px;

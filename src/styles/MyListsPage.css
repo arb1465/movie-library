@@ -10,7 +10,7 @@
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #e50914;
+  color: #0088ff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -29,7 +29,7 @@
 }
 
 .mylists-message.error-message {
-  color: #ff4d4d;
+  color: #0088ff;
 }
 
 .mylists-message.no-lists-message {
@@ -73,7 +73,7 @@
 .list-name {
   margin: 0;
   font-size: 1.6em;
-  color: #e50914;
+  color: #0088ff;
 }
 
 .list-description {
@@ -112,7 +112,7 @@
 }
 
 .btn-remove-from-list {
-  background-color: #d32f2f;
+  background-color: #0088ff;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -124,7 +124,7 @@
 }
 
 .btn-remove-from-list:hover {
-  background-color: #e53935;
+  background-color: #0088ff;
 }
 
 .list-footer-actions {
@@ -134,7 +134,7 @@
 }
 
 .btn-delete-list {
-    background-color: #7a1f1f;
+    background-color: #0279e2;
     color: white;
     border: none;
     padding: 8px 15px;

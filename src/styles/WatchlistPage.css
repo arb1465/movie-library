@@ -10,7 +10,7 @@
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #e50914;
+  color: #0088ff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -37,11 +37,11 @@
 }
 
 .watchlist-message.error-message {
-  color: #ff4d4d;
+  color: #4da9fa;
 }
 
 .watchlist-message .link {
-  color: #e50914;
+  color: #0088ff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -57,7 +57,7 @@
 }
 
 .btn-remove-watchlist {
-  background-color: #d32f2f; /* Darker red for remove */
+  background-color: #0279e2;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -69,7 +69,7 @@
 }
 
 .btn-remove-watchlist:hover {
-  background-color: #e53935;
+  background-color: #0279e2;
 }
 
 
