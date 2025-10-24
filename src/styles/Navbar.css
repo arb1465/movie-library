@@ -1,274 +1,175 @@
-/* src/components/Navbar.css */
-
+/* ===== Base Navbar ===== */
 .navbar {
-  background-color: #282c34;
-  padding: 1rem 2rem;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-left, .navbar-right {
-  display: flex;
-  align-items: center;
+  background-color: #1e1e1e;
+  padding: 12px 30px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar-brand {
-  color: #e50914;
+  color: #ff0000;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  margin-right: 2rem;
 }
 
 .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-}
-
-.nav-links li {
-  margin-right: 1.5rem;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
 }
 
 .nav-links a {
-  color: white;
+  color: #e0e0e0;
   text-decoration: none;
-  padding: 0.5rem 0.8rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active { /* Style for active link */
-  background-color: #4a4f58;
+.nav-links a:hover {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.nav-links .active {
+  background-color: #ff0000;
+  color: white;
+}
+
+/* ===== Search + Login ===== */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .search-form {
   display: flex;
-  margin-right: 1rem;
-}
-
-.search-form input {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-}
-
-.search-form button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #e50914;
-  color: #282c34;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-form button:hover {
-  background-color: #e50914;
-}
-/* No need for separate login/logout button styles here, as GoogleLoginButton handles its own */
-
-/* src/styles/Navbar.css */
-
-.header {
-    background-color: #1a1a1a;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #333;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-.brand a {
-    color: #e50914;
-    font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px; /* Spacing between nav items */
-}
-
-.main-nav li a {
-    color: #f0f0f0;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.main-nav li a:hover {
-    color: #e50914;
-}
-
-/* =================================================== */
-/*             MOBILE-SPECIFIC STYLES (Navbar)         */
-/* =================================================== */
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack items vertically */
-        padding: 10px;
-    }
-
-    .brand {
-        margin-bottom: 10px; /* Space between brand and nav */
-    }
-
-    .main-nav ul {
-        width: 100%; /* Make nav take full width */
-        justify-content: center; /* Center nav items */
-        gap: 15px; /* Reduce gap */
-    }
-
-    .main-nav li a {
-        font-size: 16px; /* Smaller font size for nav */
-    }
-}
-
-@media (max-width: 480px) {
-    .header .brand a {
-        font-size: 24px;
-    }
-
-    .main-nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: center; /* Center them */
-        gap: 8px; /* Even less gap */
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid #333; /* Separator for nav items */
-    }
-}
-
-/* src/styles/Navbar.css */
-
-.search-form {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between input and button */
+  align-items: center;
+  gap: 8px;
 }
 
 .search-input {
-    padding: 8px 12px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    font-size: 15px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.search-input:focus {
-    border-color: #e50914; /* Highlight on focus */
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2b2b2b;
+  color: white;
+  outline: none;
 }
 
 .search-button {
-    background-color: #e50914; /* Example blue, or match your brand */
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .search-button:hover {
-    background-color: #dc3545;
+  background-color: #cc0000;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #f0f0f0;
-    font-size: 16px;
+/* ===== Hamburger Menu ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  border: 2px solid #444;
+  border-radius: 6px;
 }
 
-.logout-button {
-    background-color: #dc3545; /* Red logout button */
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+.hamburger div {
+  width: 22px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
 }
 
-.logout-button:hover {
-    background-color: #c82333;
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* =================================================== */
-/*             MOBILE-SPECIFIC STYLES (Navbar)         */
-/* =================================================== */
-
+/* ===== Mobile Menu ===== */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 10px;
-    }
+  .nav-links,
+  .search-form,
+  .navbar-right > :not(.hamburger):not(.navbar-brand) {
+    display: none;
+  }
 
-    .brand {
-        margin-bottom: 10px;
-    }
+  .hamburger {
+    display: flex;
+  }
 
-    .main-nav ul {
-        width: 100%;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 15px; /* Space before search */
-    }
+  .mobile-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    z-index: 90;
+    animation: slideDown 0.3s ease;
+  }
 
-    .main-nav li a {
-        font-size: 16px;
-    }
+  .mobile-menu a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
 
-    .search-form {
-        width: 90%; /* Make search bar wider on mobile */
-        margin-bottom: 15px;
-    }
+  .mobile-search {
+    display: flex;
+    gap: 8px;
+  }
 
-    .search-input {
-        flex-grow: 1; /* Allow input to take available space */
-    }
+  .mobile-search input {
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
 
-    .user-info {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-}
+  .mobile-search button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
 
-@media (max-width: 480px) {
-    .header .brand a {
-        font-size: 24px;
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
     }
-
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        margin-top: 10px;
-        padding-top: 10px;
-        border-top: 1px solid #333;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .search-form {
-        width: 95%; /* Even wider on very small screens */
-    }
+  }
 }
