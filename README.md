@@ -1,16 +1,32 @@
-# React + Vite
+# 🎬 Movie Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React + Vite** web application that allows users to browse and explore movies.  
+Deployed on **Vercel** → [movie-library-sage-beta.vercel.app](https://movie-library-sage-beta.vercel.app)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📘 Overview
+This project is a **frontend movie library** built using **React** and **Vite** to demonstrate clean component design, API integration, and responsive UI.  
+It helps practice **React hooks**, **component composition**, and **state management** through a real-world style interface.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
+- 🔍 Browse and search movies  
+- 🎞️ View movie details (title, genre, rating, etc.)  
+- ❤️ Mark favorites or create personal watchlist 
+- 📱 Fully responsive design  
+- ⚡ Fast build and hot reload using **Vite**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+| Layer | Technology |
+|--------|-------------|
+| **Frontend** | React (Vite) |
+| **Styling** | CSS |
+| **Build Tool** | Vite |
+| **Deployment** | Vercel |
+| **Data Storage** | IndexedDB(Dexie.js) |
+| **Authentication** | Google OAthu |
+
