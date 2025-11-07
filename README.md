@@ -1,7 +1,7 @@
 # 🎬 Movie Library
 
 A simple **React + Vite** web application that allows users to browse and explore movies.  
-Deployed on **Vercel** → [movie-library-sage-beta.vercel.app](https://movie-library-sage-beta.vercel.app)
+Deployed on **Vercel** → [movie-library-arb.vercel.app](https://movie-library-arb.vercel.app)
 
 ---
 
