@@ -155,14 +155,13 @@ export async function doesCustomListNameExist(userId, listName) {
     return false; // Assume it doesn't exist if there's an error
   }
 }
-// It replaces the Firebase Firestore-based fetchUserCustomLists.
+
 export const fetchUserCustomLists = async (userId) => {
   try {
     // Use your existing getCustomListsForUser, which is already set up for Dexie
     const lists = await getCustomListsForUser(userId); // Renamed to use your existing helper
 
     // Dexie's list objects already have 'listId' as their primary key if defined as such.
-    // Ensure the structure matches what the modal expects (e.g., 'id' field, and 'movies' array)
     return lists.map(list => ({
         id: list.listId, // Use listId as the generic 'id' for modal
         name: list.name,
@@ -183,8 +182,6 @@ export const addMovieToCustomList = async (userId, movieId, listIds) => {
   }
 
   try {
-    // No need to create movieData object if you only want to store the ID
-    // const movieData = { tmdb_id: movieId }; // <-- REMOVE THIS
 
     for (const listId of listIds) {
       const listToUpdate = await db.customLists.get(listId);
